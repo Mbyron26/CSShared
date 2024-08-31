@@ -50,9 +50,8 @@ public abstract class UUIToolManagerBase<TypeInGameToolButton, TypeMod, TypeConf
         }
         else {
             EnsurePresent();
-            if (SingletonConfig<TypeConfig>.Instance.ToolButtonPresent == ToolButtonPresent.InGame) {
+            if (SingletonConfig<TypeConfig>.Instance.ToolButtonPresent == ToolButtonPresent.InGame)
                 AddInGameButton();
-            }
         }
         EnableCallback?.Invoke();
     }
@@ -66,7 +65,7 @@ public abstract class UUIToolManagerBase<TypeInGameToolButton, TypeMod, TypeConf
     }
 
     protected virtual void EnsurePresent() {
-        if (!UUISupport && (SingletonConfig<TypeConfig>.Instance.ToolButtonPresent != ToolButtonPresent.InGame || SingletonConfig<TypeConfig>.Instance.ToolButtonPresent != ToolButtonPresent.None)) {
+        if (!UUISupport && (SingletonConfig<TypeConfig>.Instance.ToolButtonPresent == ToolButtonPresent.UUI || SingletonConfig<TypeConfig>.Instance.ToolButtonPresent == ToolButtonPresent.Both)) {
             SingletonConfig<TypeConfig>.Instance.ToolButtonPresent = ToolButtonPresent.InGame;
             SingletonMod<TypeMod>.Instance.SaveConfig();
         }
