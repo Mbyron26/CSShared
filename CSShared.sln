@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35118.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CSShared", "CSShared\CSShared.shproj", "{9C0013DB-AC35-420D-97BB-F868086E1521}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CSShared.Patch", "CSShared.Patch\CSShared.Patch.shproj", "{6727E296-104A-4525-998F-B3ED19029F60}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CSShared.ToolButton", "CSShared.ToolButton\CSShared.ToolButton.shproj", "{B8BC3C15-A49C-4116-85AD-617389C4A9FD}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04228E32-38F3-44F7-8026-AB7C8ADD85A1}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CSShared.Patch\CSShared.Patch.projitems*{6727e296-104a-4525-998f-b3ed19029f60}*SharedItemsImports = 13
+		CSShared\CSShared.projitems*{9c0013db-ac35-420d-97bb-f868086e1521}*SharedItemsImports = 13
+		CSShared.ToolButton\CSShared.ToolButton.projitems*{b8bc3c15-a49c-4116-85ad-617389c4a9fd}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

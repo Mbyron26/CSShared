@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b8bc3c15-a49c-4116-85ad-617389c4a9fd</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CSShared.ToolButton</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ITool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OptionPanelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UUIToolManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ToolButtonBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ToolButtonPresent.cs" />
+  </ItemGroup>
+</Project>

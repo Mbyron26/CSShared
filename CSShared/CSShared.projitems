@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9c0013db-ac35-420d-97bb-f868086e1521</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CSShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)common\BuildVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\ChangelogContent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\ChangelogFlag.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\ChangelogInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\CompatibilityManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\ConflictModInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\IMod.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\IModLoading.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\KeyBinding.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\ModBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)common\Config.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)extension\ModLoadingExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)extension\ModSerializableDataExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)extension\ModThreadExtensionBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)extension\VersionExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Debug\ILog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Debug\Logger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Debug\LogManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Localization\ILocalization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Localization\LocaleSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Localization\ModLocalizationManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Debug\LogType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Singleton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)manager\GameInfoManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)manager\IManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)manager\ManagerPool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)tools\AssemblyTools.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)tools\JsonTool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)tools\PerformanceCounter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)tools\PluginTools.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)tools\TypeTools.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)tools\XmlTool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.ControlPanel\ControlPanelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.ControlPanel\ControlPanelHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.ControlPanel\ControlPanelManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.MessageBoxes\CompatibilityMessageBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.MessageBoxes\LogMessageBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.MessageBoxes\MessageBoxBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.MessageBoxes\ResetModMessageBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.MessageBoxes\SimpleMessageBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.OptionPanel\OptionPanelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.OptionPanel\OptionPanelHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI.OptionPanel\OptionPanelManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIAtlas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUICheckBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIColor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIColorField.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIColorPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIDropDown.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUILabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIListBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIScrollablePanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIScrollbar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUISlider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUISprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUITabContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUITextComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIValueField.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\PropertyPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\UIRender.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\UIUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Localization\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Tools\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Extension\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Common\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Debug\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Manager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\en-US.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\cs.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\de.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\es-ES.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\fr.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\it.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\ja.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\ko.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\nl.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\pl.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\pt-BR.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\ru.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\sk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\th.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\tr.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\zh-CN.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Localization\Common\zh-TW.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ArrowDown.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxOffBg.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxOn.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxOnFg.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\Circle.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\Clean.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\Close.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CloseButton.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\Copy.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CustomBackground.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\EmptySprite.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\GradientSlider.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\LineBottom.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\Paste.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\Rectangle.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ResetButton.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle1.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle2.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle3.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle4.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle5.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleOffFg.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleOnFg.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToolButton.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TransparencySprite.png" />
+  </ItemGroup>
+</Project>
