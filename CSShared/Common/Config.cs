@@ -15,7 +15,10 @@ public partial class SingletonConfig<T> : SingletonItem<T>, ILocalizationSetting
     public static void Save() {
         try {
             if (SingletonConfig<T>.Instance is not null) {
-                XmlTool.SerializeObjectToFile(SingletonConfig<T>.Instance, ConfigFilePath);
+                XmlTool.SerializeObjectToFile<T>(SingletonConfig<T>.Instance, ConfigFilePath);
+            }
+            else {
+                LogManager.GetLogger().Error($"{typeof(T)} is null when saving {ConfigFilePath}");
             }
         }
         catch (Exception ex) {
@@ -30,22 +33,22 @@ public partial class SingletonConfig<T> : SingletonItem<T>, ILocalizationSetting
             if (File.Exists(ConfigFilePath)) {
                 var instance = XmlTool.DeserializeObjectFromFile<T>(ConfigFilePath);
                 if (instance is not null && instance is T) {
-                    Instance = instance as T;
+                    SingletonConfig<T>.Instance = instance as T;
                     LogManager.GetLogger().Info("Local settings detected, deserialized");
                 }
                 else {
-                    Instance = new();
+                    SingletonConfig<T>.Instance = new();
                     LogManager.GetLogger().Info("Unable to load the setting file, generate default setting");
                     isSucceed = false;
                 }
             }
             else {
-                Instance = new();
+                SingletonConfig<T>.Instance = new();
                 LogManager.GetLogger().Info("No settings file found, generate default setting");
             }
         }
         catch (Exception ex) {
-            Instance = new();
+            SingletonConfig<T>.Instance = new();
             LogManager.GetLogger().Error(ex, "Unable to load the setting file, generate default setting");
             isSucceed = false;
         }

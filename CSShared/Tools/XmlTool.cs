@@ -12,11 +12,10 @@ public static class XmlTool {
             throw new ArgumentNullException("Target object cannot be null or empty when serialize object to file");
         if (string.IsNullOrEmpty(filePath))
             throw new ArgumentNullException(filePath, "Target file path cannot be null or empty when serialize object to file");
-        if (!File.Exists(filePath))
-            throw new FileNotFoundException("Target file path doesn't exit when serialize object to file");
-        var serializer = new XmlSerializer(typeof(T));
         using var writer = new StreamWriter(filePath);
+        var serializer = new XmlSerializer(typeof(T));
         serializer.Serialize(writer, obj, xmlSerializerNamespaces);
+
     }
 
     public static void SerializeObjectToFile<T>(T obj, string filePath) {
@@ -24,8 +23,6 @@ public static class XmlTool {
             throw new ArgumentNullException("Target object cannot be null or empty when serialize object to file");
         if (string.IsNullOrEmpty(filePath))
             throw new ArgumentNullException(filePath, "Target file path cannot be null or empty when serialize object to file");
-        if (!File.Exists(filePath))
-            throw new FileNotFoundException("Target file path doesn't exit when serialize object to file");
         using var writer = new StreamWriter(filePath);
         var xmlSerializerNamespaces = new XmlSerializerNamespaces();
         xmlSerializerNamespaces.Add(string.Empty, string.Empty);
